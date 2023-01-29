@@ -1,0 +1,79 @@
+[
+  {
+    "src":"https://lekkibritishschool.org/wp-content/uploads/2019/07/web-slide.jpg",
+    "title":"Diligence Bilingual Complex",
+    "discription": "The place Where Dreams Come true",
+    "buttonLabel": "LEARN MORE",
+    "id": 1
+  },
+  {
+    "src":"https://lekkibritishschool.org/wp-content/uploads/2018/02/intro-1350x500.jpg",
+    "title":"2021/2022 ENROLMENT",
+    "discription": "Admissions are open to our various schools: Pre-school, Junior School, Senior School and Advanced Studies. Enrol your child",
+    "buttonLabel": "LEARN MORE",
+    "id": 2
+  },
+  {
+    "src":"https://lekkibritishschool.org/wp-content/uploads/2018/02/presch-1350x500.jpg",
+    "title":"PRE-SCHOOL",
+    "discription": "The Lekki British Pre-School programme is adapted from the curriculum guide for the United Kingdom Foundation Stage.",
+    "buttonLabel":"LEARN MORE",
+    "id": 3
+  },
+  {
+    "src":"https://lekkibritishschool.org/wp-content/uploads/2018/02/junior-1350x500.jpg",
+    "title":"JUNIOR SCHOOL",
+    "discription": "Children may join Lekki British Junior School at any time during the academic year and do not have to wait until the start of each term.",
+    "buttonLabel": "LEARN MORE",
+    "id": 4
+  },
+  {
+    "src":"https://lekkibritishschool.org/wp-content/uploads/2018/02/high-1-1350x500.jpg",
+    "title":"SENIOR SCHOOL",
+    "discription": "As an international school we are proud to provide the highest possible standard of education to our students, enabling them to compete in an increasingly competitive global environment.",
+    "buttonLabel": "LEARN MORE",
+    "id": 5
+  },
+  {
+    "src":"https://lekkibritishschool.org/wp-content/uploads/2018/02/advanced-1350x500.jpg",
+    "title":"CAMBRIDGE A LEVEL",
+    "discription": "Cambridge Advanced is typically for learners aged 16 to 19 years who need advanced study to prepare for university and higher education.",
+    "buttonLabel": "LEARN MORE",
+    "id": 6
+  },
+  {
+    "src":"https://lekkibritishschool.org/wp-content/uploads/2018/02/hostel-1350x500.jpg",
+    "title":"HOSTEL LIFE",
+    "discription": "Our boys' and girls' hostels are very safe, neat and well-ventilated.",
+    "buttonLabel": "LEARN MORE",
+    "id": 7
+  },
+  {
+    "src":"https://lekkibritishschool.org/wp-content/uploads/2018/02/music-1350x500.jpg",
+    "title":"MUSIC",
+    "discription": "Our music room is equipped with state-of-the-art musical instruments.",
+    "buttonLabel": "LEARN MORE",
+    "id": 8
+  },
+  {
+    "src": "https://lekkibritishschool.org/wp-content/uploads/2018/02/lab-1350x500.jpg",
+    "title":"SCHOOL LAB",
+    "discription": "The chemistry lab is fully equipped with state of the art laboratory equipment.",
+    "buttonLabel": "LEARN MORE",
+    "id": 9
+  },
+  {
+    "src": "https://lekkibritishschool.org/wp-content/uploads/2018/02/environment-1350x500.jpg",
+    "title":"CONDUCIVE ENVIRONMENT",
+    "discription": "Our classrooms and study areas are very conducive for learning.",
+    "buttonLabel": "LEARN MORE",
+    "id": 10
+  },
+  {
+    "src": "https://lekkibritishschool.org/wp-content/uploads/2018/02/swimming-1350x500.jpg",
+    "title":"WORK & PLAY",
+    "discription": "Our school nurtures future leaders through work and play.",
+    "buttonLabel": "SEE HOW",
+    "id": 11
+  }
+]
