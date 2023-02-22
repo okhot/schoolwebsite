@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const StyledCounter = styled.div`
@@ -59,26 +59,53 @@ function Counter() {
   const [count3, setCount3] = useState(0);
   const [count4, setCount4] = useState(0);
 
-  const scroll = window.innerHeight;
-  if (scroll === 160) {
-    setTimeout(() => {
+  useEffect(() => {
+    const intervalOne = setTimeout(() => {
       setInterval(() => {
-        setCount1((count) => (count === 4 ? (count = count + 1) : count));
+        setCount1((count) => {
+          if (count === 6) {
+            clearInterval(intervalOne);
+          } else {
+            count = count + 1;
+          }
+          return count;
+        });
       }, 1000);
 
-      setInterval(() => {
-        setCount2((count) => (count = count + 133));
-      }, 100);
+      const intervalTwo = setInterval(() => {
+        setCount2((count) => {
+          if (count > 76) {
+            clearInterval(intervalTwo);
+          } else {
+            count = count + 13;
+          }
+          return count;
+        });
+      }, 500);
 
-      setInterval(() => {
-        setCount3((count) => (count = count + 133));
-      }, 100);
+      const intervalThree = setInterval(() => {
+        setCount3((count) => {
+          if (count > 87) {
+            clearInterval(intervalThree);
+          } else {
+            count = count + 13;
+          }
+          return count;
+        });
+      }, 250);
 
-      setInterval(() => {
-        setCount4((count) => (count = count + 133));
-      }, 100);
-    }, 5000);
-  }
+      const intervalforth = setInterval(() => {
+        setCount4((count) => {
+          if (count > 97) {
+            clearInterval(intervalforth);
+          } else {
+            count = count + 132;
+          }
+          return count;
+        });
+      }, 125);
+    });
+  }, []);
 
   return (
     <StyledCounter>

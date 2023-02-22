@@ -20,11 +20,20 @@ const StyledCard = styled.div`
     justify-content: center;
     align-items: flex-end;
     width: 300px;
+    min-width: 250px;
     height: 300px;
 
     p {
       color: #fff;
       font-size: 25px;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .cardContainer {
+      flex-direction: column;
+      align-items: center;
+      width: 300px;
     }
   }
 `;

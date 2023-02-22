@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { RiDoubleQuotesL, RiDoubleQuotesR } from 'react-icons/ri';
+import { SlideTestimonial } from 'react-materialui-testimonials-transition';
+import test from '../../../Data/Testimonials.json';
 
 import styled from 'styled-components';
 
@@ -33,7 +35,7 @@ const StyledContaier = styled.div`
     margin: 0 auto;
     z-index: 1;
 
-    h1  {
+    h1 {
     }
   }
 
@@ -43,7 +45,7 @@ const StyledContaier = styled.div`
     width: 50%;
     margin: auto;
     text-align: center;
-    
+
     p {
       margin: 5px;
       padding: 0;
@@ -52,13 +54,28 @@ const StyledContaier = styled.div`
   }
 
   .quoteContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+  }
+  @media screen and (max-width: 550px) {
+    .testimonial__content {
       width: 100%;
-      display: flex;
-      justify-content: center;
-      z-index: 1;
     }
+  }
 `;
 const Testimonials = () => {
+  const [num, setNum] = useState(0);
+
+  useEffect(() => {
+    const intervalID = setInterval(() => {
+      setNum((prev) => (prev === test.length - 1 ? 0 : prev + 1));
+    }, 5000);
+
+    return () => clearInterval(intervalID);
+  }, [num]);
+
   return (
     <StyledContaier>
       <div className="layer" />
@@ -67,36 +84,17 @@ const Testimonials = () => {
         <h1>TESTIMONIALS</h1>
       </div>
       <div className="testimonial__content">
-        <p>
-          My Lekki British experience was nothing short of a building block to
-          excellence. Moving on to study aeronautical engineering in
-          Loughborough University come 
-        </p>
-        <span>Ms. Oyindamola Oyedepo, Lagos</span>
-        {/* <p>
-          My time at Lekki British Senior School was a great learning
-          experience! It has been more than 7 years since I graduated with my
-          friends, who have each done wonders to make the world a better place,
-          and I still feel nostalgic about the moments we spent there.Read more
-        </p>
-        <span> Ayushi Pradhan, Salesforce US</span>
-
-        <p>
-          My name is Daniel Fatade. I have spent nearly the entirety of my life
-          in Lekki British School. My stay at LBS started with my time in the
-          reception class in junior school. As the years flew by, ! eventually
-          found myself in Year 11 before graduating and arriving at Syracuse
-          University. I have now spent roughly a year and half at Syracuse and
-          am now a sophomore studying Computer Engineering.Read more
-        </p>
-        <span> Mr. Daniel Fatade, Sycaruse University </span>
-
-        <p>
-          My Lekki British experience was nothing short of a building block to
-          excellence. Moving on to study aeronautical engineering in
-          Loughborough University come September 2018.Read more
-        </p>
-        <span> Ms. Oyindamola Oyedepo, Lagos</span> */}
+        <SlideTestimonial
+          image=""
+          alt="Arif Shariati"
+          imageRadius="50%"
+          title="Arif Shariati"
+          subtitle="CEO"
+          testimonial={test[num].testimony}
+          transition={true}
+          speed={1000}
+          shadow={5}
+        />
       </div>
       <div className="quoteContainer">
         <RiDoubleQuotesR size={60} color="#fff" />

@@ -8,7 +8,7 @@ const StyledStickyBar = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 10px 10%;
+  padding: 1% 10%;
 `;
 
 const StyledBarInfoWrapper = styled.div`
@@ -23,19 +23,25 @@ const StyledBarInfo = styled.div`
   border-right: 1px solid #dedddd;
   font-size: 1rem;
 
-  p{
+  p {
     margin: 0;
     padding: 0;
     color: #4f4a4a;
     font-size: 0.75rem;
     text-align: left;
   }
-  
+
   h3 {
     margin: 0;
     padding: 0;
     text-align: left;
     font-size: 0.875rem;
+  }
+
+  @media screen and (max-width: 550px) {
+    .hide {
+      display: none;
+    }
   }
 `;
 
@@ -44,7 +50,10 @@ const StickyBar = () => {
     <StyledStickyBar>
       <div className="stickyBar-logo">
         <a href="#home">
-          <img src="http://lekkibritishschool.org/wp-content/uploads/2018/02/logo.png" alt="logo"/>
+          <img
+            src="http://lekkibritishschool.org/wp-content/uploads/2018/02/logo.png"
+            alt="logo"
+          />
         </a>
       </div>
       <StyledBarInfoWrapper>
@@ -52,12 +61,14 @@ const StickyBar = () => {
           <p>EMAIL</p>
           <h3>enquiries@lekkibritishschool.org</h3>
         </StyledBarInfo>
-        <StyledBarInfo>
-          <p>PHONE</p>
-          <h3>(+234) 01 906 0000</h3>
+        <StyledBarInfo className="hide">
+          <p className="hide">PHONE</p>
+          <h3 className="hide">(+234) 01 906 0000</h3>
         </StyledBarInfo>
       </StyledBarInfoWrapper>
-      <Buttons label="Student Portal" />
+      <div className="hide">
+        <Buttons label="Student Portal" />
+      </div>
     </StyledStickyBar>
   );
 };

@@ -10,6 +10,7 @@ const StyledGallery = styled.div`
 
   .gallery__image {
     width: 20%;
+    min-width: 250px;
     height: 300px;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,16 +21,34 @@ const StyledGallery = styled.div`
     color: #fff;
     font-size: 28px;
     font-weight: 500;
+    filter: brightness(100%);
+    transition: 0.2s linear filter;
+    scale: 1;
+    transition: 0.3s ease-in-out scale;
 
     p {
-      opacity: 1;
+      opacity: 0;
+      text-align: center;
+      transition: 0.2s ease-in opacity;
     }
   }
 
   .gallery__image:hover {
     cursor: pointer;
-    background-image: none;
-    background-color: rgba(0, 0, 0, 0, 0.7);
+    filter: brightness(25%);
+    scale: 1.055;
+    z-index: 4;
+
+    p {
+      opacity: 1;
+      z-index: 4;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .gallery__image {
+      min-width: 50%;
+    }
   }
 `;
 

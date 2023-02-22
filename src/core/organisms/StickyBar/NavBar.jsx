@@ -38,12 +38,9 @@ const NavBar = () => {
     <StyledNavBar>
       <ul>
         <li><Link to="#home">HOME</Link></li>
-        <li><Link to="#admission">ADMISSIONS</Link></li>
         <li><Link to="#discover">DISCOVER</Link></li>
-        <li><Link to="#preschool">PRE-SCHOOL</Link></li>
         <li><Link to="#juniorschool">JUNIOR SCHOOL</Link></li>
         <li><Link to="#seinorschool">SENIOR SCHOOL</Link></li>
-        <li><Link to="#advclasses">ADVANCED CLASSES</Link></li>
         <li><Link to="#contact">CONTACT</Link></li>
       </ul>
 

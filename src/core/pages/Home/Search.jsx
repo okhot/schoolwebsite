@@ -8,70 +8,82 @@ import {
 import styled from 'styled-components';
 
 const StyledContainer = styled.div`
-  background-color: #34393c;
-  display: flex;
-  padding: 5%;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #34393c;
+    display: flex;
+    padding: 0.5% 5%;
+  }
 
-  .inputFeild {
-    width: 33%;
-    h2 {
-      margin: 10px 0;
-      color: white;
-      font-size: 24px;
-    }
-
-    input {
-      height: 50px;
-      width: 300px;
-      border-radius: 8px 0 0 8px;
-    }
-
-    input:focus {
-      outline: none;
-    }
-
-    button {
-      height: 54px;
-      border: none;
-      padding: 0 10px;
-      background-color: #1ba4d1;
-      color: white;
-      font-size: 16px;
-      font-weight: 400;
-      border-radius: 0 8px 8px 0;
+  @media screen and (max-width: 550px) {
+    .container {
+      h2 {
+        margin: 0;
+        font-size: 18px;
+      }
     }
   }
 `;
 
 const StyledSocialLogos = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 33%;
+  .logosContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 
-  h2 {
+    .logos {
+      display: flex;
+      gap: 5px;
+    }
+
+    .icons {
+      width: 35px;
+      height: 35px;
+      border: 3px solid orange;
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    h2 {
       margin: 10px 0;
       color: white;
       font-size: 24px;
     }
+  }
+
+  @media screen and (max-width: 550px) {
+    .logosContainer {
+      width: fit-content;
+
+      h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .logos {
+        display: flex;
+      }
+    }
+  }
 `;
 
 const Search = () => {
   return (
     <StyledContainer>
-      <StyledSocialLogos>
-        <h2>CONNECT WITH US</h2>
-        <div className="logos">
-        <RiFacebookBoxLine size={55} color="#fff" />
-        <RiInstagramLine size={55} color="#fff" />
-        <RiTwitterLine size={55} color="#fff" />
-        <RiLinkedinBoxLine size={55} color="#fff" />
-        </div>
-      </StyledSocialLogos>
-
-      <div className="inputFeild">
-        <h2>GET THE LATEST LBS INFO</h2>
-        <input type="text" placeholder="EMAIL" />
-        <button>Subscribe</button>
+      <div className="container">
+        <StyledSocialLogos>
+          <div className="logosContainer">
+            <h2>CONNECT WITH US</h2>
+            <div className="logos">
+              <RiFacebookBoxLine size={50} color="#fff" className="icons" />
+              <RiInstagramLine size={50} color="#fff" className="icons" />
+              <RiTwitterLine size={50} color="#fff" className="icons" />
+              <RiLinkedinBoxLine size={50} color="#fff" className="icons" />
+            </div>
+          </div>
+        </StyledSocialLogos>
       </div>
     </StyledContainer>
   );
